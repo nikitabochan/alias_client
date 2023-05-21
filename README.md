@@ -1,5 +1,4 @@
 # alias_client
-Alias client to interact with the alias api
 
 ### Description
 This is a go libary which helps you interact with the alias api. This libary is not using official api endpoints.
@@ -34,7 +33,15 @@ func main() {
 	fmt.Println(loginResponse)
 }
 ```
-For a more detailed example please check here
+For a more detailed example please check [here](https://github.com/vadeex/alias_client/blob/main/example/main.go)
+
+### Methods
+Method | Description                                                                                                                                                        | Parameters                         | Return
+--- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|--------------
+CreateClient | Creates a new session for browsing the API. Takes username string and a password string. Optional proxy parameter (format: "http://user:pass@host:port") | `username string`, `password string`, (`proxy string`) | `LoginResponse`, `error`
+GetEarnings | Returns the balance of the account |  | `EarningsResponse`, `error`
+GetSales | Returns a map with sales activity grouped by cashout(key) |  | `map[Cashout][]Item`, `error`
+GetSale | Lookup a sale id. It will return the details of the sale like name and size | `saleid string` | `EarningsResponseSale`, `error`
 
 ### Help or Questions?
 Add me on discord: vadex#6367
