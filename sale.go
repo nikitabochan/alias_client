@@ -9,9 +9,9 @@ import (
 	http "github.com/bogdanfinn/fhttp"
 )
 
-func (session *AliasSession) GetEarningsSale(id string) (*EarningsResponseSale, error) {
+func (session *AliasSession) GetEarningsSale(saleid string) (*EarningsResponseSale, error) {
 	var cashoutResp EarningsResponseSale
-	req, err := http.NewRequest("POST", "https://sell-api.goat.com/api/v1/purchase-orders/get-earnings", strings.NewReader(fmt.Sprintf(`{"number":"%s"}`, id)))
+	req, err := http.NewRequest("POST", "https://sell-api.goat.com/api/v1/purchase-orders/get-earnings", strings.NewReader(fmt.Sprintf(`{"number":"%s"}`, saleid)))
 	if err != nil {
 		return &cashoutResp, err
 	}
