@@ -1,7 +1,7 @@
 # alias_client
 
 ### Description
-This is a go libary which helps you interact with the alias api. This libary is not using official api endpoints.
+This is a go libary which helps you interact with the alias api. This libary is not using official api endpoints. This libary is using the TLS client from [@bogdanfinn](https://github.com/bogdanfinn)!
 
 ### Installation
 
