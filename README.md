@@ -36,8 +36,8 @@ func main() {
 For a more detailed example please check [here](https://github.com/vadeex/alias_client/blob/main/example/main.go)
 
 ### Methods
-Method | Description                                                                                                                                                        | Function Parameters                                   | Return
---- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|--------------
+Method | Description                                                                                                                                                        | Parameters                                   | Return
+--- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|--------------
 CreateClient | Creates a new session for browsing the API. Takes username string and a password string. Optional proxy parameter (format: "http://user:pass@host:port") | `username string`, `password string`, (`proxy string`) | `LoginResponse`, `error`
 GetEarnings | Returns the balance of the account |  | `EarningsResponse`, `error`
 GetSales | Returns a map with sales activity grouped by cashout(key) |  | `map[Cashout][]Item`, `error`
