@@ -13,7 +13,6 @@ func CreateClient(username string, password string, args ...string) *AliasSessio
 		tls_client.WithClientProfile(tls_client.Safari_IOS_16_0),
 		tls_client.WithNotFollowRedirects(),
 		tls_client.WithCookieJar(jar),
-		tls_client.WithCharlesProxy("127.0.0.1", "8887"),
 	}
 	if args != nil {
 		options = append(options, tls_client.WithProxyUrl(args[0]))
